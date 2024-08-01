@@ -64,7 +64,7 @@ NanoDB is a versatile Python-based application that provides a graphical user in
 
     ```shell
     git clone https://github.com/lorencig/NanoDB-Research-Activity-Data-Management-System.git
-    cd NanoDB-Research-Activity-Data-Management
+    cd NanoDB-Research-Activity-Data-Management-System
     ```
 
 2. Install the required Python packages:
