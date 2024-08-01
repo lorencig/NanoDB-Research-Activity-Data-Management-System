@@ -1,6 +1,8 @@
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/3729226af24c46e7807c89f630f6341e)](https://app.codacy.com/gh/lorencig/NanoDB-Research-Activity-Data-Management-System/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
+
 # NanoDB: Research Activity Data Management System
 NanoDB is a versatile Python-based application that provides a graphical user interface (GUI) for entering, managing, and exporting laboratory experiment data. The application allows users to submit data to a database, generate PDF reports, and handle image files efficiently.
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/3729226af24c46e7807c89f630f6341e)](https://app.codacy.com/gh/lorencig/NanoDB-Research-Activity-Data-Management-System/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
+
 
 ## Table of Contents
 
