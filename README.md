@@ -63,8 +63,8 @@ NanoDB is a versatile Python-based application that provides a graphical user in
 1. Clone the repository:
 
     ```shell
-    git clone https://github.com/yourusername/versatile-data-entry.git
-    cd versatile-data-entry
+    git clone https://github.com/lorencig/NanoDB-Research-Activity-Data-Management-System.git
+    cd NanoDB-Research-Activity-Data-Management
     ```
 
 2. Install the required Python packages:
