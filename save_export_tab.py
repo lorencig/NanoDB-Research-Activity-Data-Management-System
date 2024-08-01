@@ -93,7 +93,7 @@ class SaveExportTab(ttk.Frame):
             self.parent.clipboard_append(message)
             self.parent.update()  # now it stays on the clipboard after the window is closed
 
-        message = "Gjurgjaj, L., Silvestri, N., Hysa, E., & Pellegrino, T. (2024). Versatile Data Entry tailored for laboratory experiments. Zenodo. https://doi.org/10.XXX/zenodo.XXX"
+        message = "Gjurgjaj, L., Silvestri, N., Hysa, E., & Pellegrino, T. (2024). NanoDB: Research Activity Data Management System. Zenodo. https://doi.org/10.XXX/zenodo.XXX"
         
         # Create a new top-level window
         top = tk.Toplevel(self)
