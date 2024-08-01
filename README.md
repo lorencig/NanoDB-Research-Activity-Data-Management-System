@@ -25,9 +25,11 @@ NanoDB is a versatile Python-based application that provides a graphical user in
    - Characterization: For recording characterization results
    - Save & Export: For saving data and generating reports
 
+Tabs can be added or edited according to guidelines in [Function Documentation (#function-documentation).
+
 2. **Data Persistence**: All entered data is saved locally in an Excel file, ensuring data integrity and easy access.
 
-3. **Dynamic Form Fields**: The interface adapts based on user input, showing or hiding relevant fields as needed.
+3. **Dynamic Form Fields**: The interface adapts based on user input, showing or hiding relevant fields as needed. Entries are also dynamic between tabs. 
 
 4. **PDF Report Generation**: Users can generate comprehensive PDF reports of their experiments with a single click.
 
