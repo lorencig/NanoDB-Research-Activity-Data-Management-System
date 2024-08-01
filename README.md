@@ -105,10 +105,11 @@ NanoDB is a versatile Python-based application that provides a graphical user in
 
 - `main.py`: The main script to run the application.
 - `requirements.txt`: List of Python packages required to run the application.
-- `logo.png`, `fly.png`, `report.png`, `quote.png`, `TEM.png`, `nuclear.png`: Icons used in the GUI.
+- `logo.png`, `fly.png`, `report.png`, `quote.png`, `TEM.png`, `nuclear.png`, `logo.ico`: Icons used in the GUI.
 - `README.md`: Documentation file.
-- `LICENSE`: License file.    
-
+- `SCREENSHOT.md`: Preview of all application tabs and PDF report.
+- `main.spec`: File to be refered for building the executable.
+- `LICENSE.md`: License file. 
 
 ## Creating Executable
 
@@ -123,11 +124,8 @@ To create a standalone executable (.exe) for Windows using PyInstaller, follow t
 2. Create the executable:
 
     ```shell
-    pyinstaller --onefile --windowed main.py
-    ```
-
-   - `--onefile`: Packages the application into a single executable file.
-   - `--windowed`: Ensures no console window is opened when running the application.
+    pyinstaller main.spec
+    ```
 
 3. The .exe file will be located in the `dist` directory.
 
