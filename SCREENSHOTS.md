@@ -1,11 +1,7 @@
 ## Screenshots
 
 Here are some screenshots of the NanoDB application in action:
-
-### Main Interface
-
-![Main Interface](./screenshots/main_interface.png)
-*The main interface of the NanoDB application, showcasing the four primary tabs.*
+*The main interface of the NanoDB application, showcases the four primary tabs.*
 
 ### Intro Tab
 
