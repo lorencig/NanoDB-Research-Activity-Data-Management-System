@@ -20,11 +20,11 @@ NanoDB is a versatile Python-based application that provides a graphical user in
 ## Features
 
 1. **Intuitive User Interface**: The application is divided into four main tabs:
-   - Intro: For basic sample information
+   - Intro: For basic sample information.
    - Synthesis: For detailed synthesis parameters
-   - Characterization: For recording characterization results
-   - Save & Export: For saving data and generating reports
-    Tabs can be added or edited according to guidelines in [Function Documentation (#function-documentation).
+   - Characterization: For recording characterization results.
+   - Save & Export: For saving data and generating reports.
+   - Tabs can be added or edited according to guidelines in [Function Documentation (#function-documentation).
 
 2. **Data Persistence**: All entered data is saved locally in an Excel file, ensuring data integrity and easy access.
 
