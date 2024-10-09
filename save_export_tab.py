@@ -312,15 +312,23 @@ class SaveExportTab(ttk.Frame):
 
             doc.build(story)
             messagebox.showinfo("Success", f"PDF generated: {file_path}")
-            
-            if os.name == 'nt':
+                
+            self.open_pdf(file_path)
+        except Exception as e:
+            messagebox.showerror("Error", f"Failed to generate PDF: {str(e)}")
+
+    def open_pdf(self, file_path):
+        try:
+            if sys.platform == 'win32':  # Windows
                 os.startfile(file_path)
-            elif os.name == 'posix':
-                os.system(f"open {file_path}")
+            elif sys.platform == 'darwin':  # macOS
+                subprocess.run(['open', file_path], check=True)
+            elif sys.platform.startswith('linux'):  # Linux
+                subprocess.run(['xdg-open', file_path], check=True)
             else:
                 messagebox.showinfo("Info", "Please open the PDF manually.")
         except Exception as e:
-            messagebox.showerror("Error", f"Failed to generate PDF: {str(e)}")
+            messagebox.showerror("Error", f"Failed to open PDF: {str(e)}")
 
     def resize_image_for_pdf(self, image_path):
         img = Image.open(image_path)
