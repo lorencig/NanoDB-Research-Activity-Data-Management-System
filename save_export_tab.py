@@ -10,7 +10,6 @@ from reportlab.lib.units import inch
 from PIL import Image
 import os
 import sys
-import shlex
 import subprocess
 import zipfile
 import tempfile
@@ -320,15 +319,12 @@ class SaveExportTab(ttk.Frame):
 
     def open_pdf(self, file_path):
         try:
-            if not os.path.exists(file_path):
-                raise FileNotFoundError(f"File not found: {file_path}")
-
             if sys.platform == 'win32':  # Windows
-                os.startfile(os.path.normpath(file_path))
+                os.startfile(file_path)
             elif sys.platform == 'darwin':  # macOS
-                os.system(f'open "{shlex.quote(file_path)}"')
+                subprocess.run(['open', file_path], check=True)
             elif sys.platform.startswith('linux'):  # Linux
-                os.system(f'xdg-open "{shlex.quote(file_path)}"')
+                subprocess.run(['xdg-open', file_path], check=True)
             else:
                 messagebox.showinfo("Info", "Please open the PDF manually.")
         except Exception as e:
