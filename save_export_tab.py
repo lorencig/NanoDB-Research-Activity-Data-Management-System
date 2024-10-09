@@ -11,6 +11,7 @@ from PIL import Image
 import os
 import sys
 import subprocess
+import shlex
 import zipfile
 import tempfile
 
@@ -319,6 +320,7 @@ class SaveExportTab(ttk.Frame):
 
     def open_pdf(self, file_path):
         try:
+            file_path = os.path.abspath(file_path)  # Ensure the file path is absolute and safe
             if sys.platform == 'win32':  # Windows
                 os.startfile(file_path)
             elif sys.platform == 'darwin':  # macOS
@@ -329,6 +331,7 @@ class SaveExportTab(ttk.Frame):
                 messagebox.showinfo("Info", "Please open the PDF manually.")
         except Exception as e:
             messagebox.showerror("Error", f"Failed to open PDF: {str(e)}")
+
 
     def resize_image_for_pdf(self, image_path):
         img = Image.open(image_path)
@@ -365,6 +368,7 @@ class SaveExportTab(ttk.Frame):
         self.image_list.extend(filenames)
         
         self.prompt_zip_save_location()
+
 
     def prompt_zip_save_location(self):
         zip_path = filedialog.asksaveasfilename(
