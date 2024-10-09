@@ -286,14 +286,12 @@ class SaveExportTab(ttk.Frame):
             story.append(title)
             story.append(Spacer(1, 12))
 
-            styles = getSampleStyleSheet()
             # Customize subtitle style
             subtitle_style = ParagraphStyle(
                 name='CustomSubtitle',
                 parent=styles['Normal'],
                 alignment=1  # Center alignment
             )
-            # Subtitle
             subtitle = Paragraph("Generated automatically from NanoDB", style=subtitle_style)
             story.append(subtitle)
             story.append(Spacer(1, 12))
@@ -313,24 +311,12 @@ class SaveExportTab(ttk.Frame):
 
             doc.build(story)
             messagebox.showinfo("Success", f"PDF generated: {file_path}")
-                
-            self.open_pdf(file_path)
+            
+            # Remove or comment out the open_pdf call
+            # self.open_pdf(file_path)
+
         except Exception as e:
             messagebox.showerror("Error", f"Failed to generate PDF: {str(e)}")
-
-    def open_pdf(self, file_path):
-        try:
-            file_path = os.path.abspath(file_path)  # Ensure the file path is absolute and safe
-            if sys.platform == 'win32':  # Windows
-                os.startfile(file_path)
-            elif sys.platform == 'darwin':  # macOS
-                subprocess.run(['open', file_path], check=True)
-            elif sys.platform.startswith('linux'):  # Linux
-                subprocess.run(['xdg-open', file_path], check=True)
-            else:
-                messagebox.showinfo("Info", "Please open the PDF manually.")
-        except Exception as e:
-            messagebox.showerror("Error", f"Failed to open PDF: {str(e)}")
 
 
     def resize_image_for_pdf(self, image_path):
