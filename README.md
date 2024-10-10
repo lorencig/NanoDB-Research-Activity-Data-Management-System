@@ -6,14 +6,28 @@
  
 ---
 
+# 🌎 Overview NanoDB
+
+Those who work daily in the lab know that keeping experimental data well-structured is a tough task, often leading to data loss. 
+Tools like LIMS and ELNs help but are usually expensive and hard to adapt to specific project workflows or algorithms. Not to mention issues with data integrity, ownership, and transfer. 
+
+To address these challenges, with colleagues at [IIT](https://nanobio.iit.it/) have developed a fully customizable Python-based app for managing our experiments. It uses a local database, giving us full control over our data. The current version includes dynamic data entry, data editing, PDF report generation, and image compression.
+
+We published the blueprint of this app as open-source code from which you can easily adjust the fields and add new functions based on your specific project. 
+This makes the app adaptable to the needs of each department, offering a free, versatile, and practical solution.
+
+You can fork the project on GitHub and tailor it to your needs. Please share any improvements that could help the community, and we’re happy to assist if you run into any issues—check the readme for detailed operational instructions.
+ 
+---
+
 ## ✨ Key Features
 
 1. **Intuitive User Interface**:
-   - Our example contains four main tabs guide users through the data collection process, **but all the tabs, frames and entries can be easily changed**:
+   - Our example contains four main tabs that guide users through the data collection process, **but all the tabs, frames, and entries can be easily changed**:
      - **Intro**: Enter basic information about the sample, create new entry or call old sample data throught the search bar. All entries will appear in the listbox. Type of entries used: Combobox, Comment, Date, Simple Entry.
      - **Synthesis**: Type of entries used: Combobox, Simple Entry, dynamic entries based on selected values.
      - **Characterization**: Type of entries used: Combobox, Spinbox, Simple Entry, dynamic entries based on selected values.
-     - **Save & Export**: Save the data to the local DB, generate report in PDF and zip images renamed after the sample name.
+     - **Save & Export**: Save the data to the local DB, generate a report in PDF, and zip images renamed after the sample name.
 
 2. **Dynamic Data Fields**:
    - The form fields are adaptive based on user input, offering a customized experience that evolves as different data is input across the tabs.
@@ -55,7 +69,7 @@
 
 ---
 
-## 🛠️ Code Structure aka Documentation
+# 🛠️ Code Structure aka Documentation
 
 ## 📂 Files
 
@@ -70,7 +84,9 @@
 - **`synthesis_tab.py`**: The second tab of the app, containing generally combobox and simple text type of entry.
 - **`characterization_tab.py`**: The third tab of the app, containing generally spinbox, combobox and simple text type of entry.
 - **`save_export_tab.py`**: The last tab of the app, containing the functions to write/edit the entry on the DB, generate the PDF containing also images (optional), compressing images saving it with the Sample name prefix, restart the app to ensure a clean insertion of a new entry.
+  
 ---
+
 ## 🧠 Functions and code logic
 
 ### main.py
@@ -97,9 +113,6 @@
             
         *   Change tab order by reordering the self.notebook.add() calls.
             
-
-### intro\_tab.py
-
 #### Class: IntroTab
 
 *   **setup\_widgets(self)**:
@@ -151,9 +164,6 @@
         *   Select which fields are filled out and how.
             
         *   Add new fields to be filled out when an item is selected.
-            
-
-### synthesis\_tab.py and characterization\_tab.py
 
 #### Class: SynthesisTab and CharacterizationTab
 
@@ -177,8 +187,6 @@
         *   Create the appearance or behavior of the label frames.
             
         *   Add additional customization options for frames.
-            
-### save\_export\_tab.py
 
 #### Class: SaveExportTab
           
@@ -216,7 +224,6 @@
 
         *   Limit the maximal number of images that can be added.
         
-
             
 *   **create\_zip(self, zip\_path)**:
     
@@ -229,7 +236,9 @@
         *   Add additional files or data to be included in the zip.
 
         *   Give to the user the choice of where to save localy.
+        
 ---
+
 ## 〰 Data Flow
 
 ```plaintext
@@ -246,6 +255,9 @@
                    └─────────────┘
 ```
 
+---
+
+
 ## 📤Exporting Data
 
 NanoDB offers multiple export options:
@@ -253,6 +265,7 @@ NanoDB offers multiple export options:
 - Excel: Full dataset export
 - PDF: Formatted report of individual experiments
 - Image ZIP: Collated images for each experiment
+
 ---
 
 ## 💾 Creating Executable
@@ -282,17 +295,15 @@ To create a standalone executable (.exe) for Windows using PyInstaller, follow t
 - **ttkbootstrap**: Provides a sleek interface and theming for the app.
 - **OpenPyXL**: Used for handling Excel files for data storage.
 - **ReportLab**: Library for generating PDF reports.
-- **Pillow**: Handles image management within the app.
 
 ---
-
-
 
 ## 🆘 Need Help?
 
 - Check out our [Documentation](#)
-- Contact the maintainers directly
+- Contact the [maintainers](mailto:lorencigjurgjaj@gmail.com?subject=NanoDB%20App) directly 
 
+---
 
 ## 📜 License
 
@@ -313,6 +324,7 @@ This software is separate from the author’s academic and professional roles at
 ![ttkbootstrap](https://img.shields.io/badge/ttkbootstrap-%230081CB.svg?style=for-the-badge&logo=python&logoColor=white)
 ![OpenPyXL](https://img.shields.io/badge/OpenPyXL-%232536A4.svg?style=for-the-badge&logo=python&logoColor=white)
 ![ReportLab](https://img.shields.io/badge/ReportLab-%234B8BBE.svg?style=for-the-badge&logo=python&logoColor=white)
-![Pillow](https://img.shields.io/badge/Pillow-%232B2B2B.svg?style=for-the-badge&logo=python&logoColor=white)
+
+
 
 ---
