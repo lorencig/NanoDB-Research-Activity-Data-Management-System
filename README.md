@@ -8,15 +8,9 @@
 
 # 🌎 Overview NanoDB
 
-Those who work daily in the lab know that keeping experimental data well-structured is a tough task, often leading to data loss. 
-Tools like LIMS and ELNs help but are usually expensive and hard to adapt to specific project workflows or algorithms. Not to mention issues with data integrity, ownership, and transfer. 
+Many existing solutions for data management in research, like LIMS and ELNs, have significant limitations. LIMS systems tend to be rigid and expensive, often requiring costly licenses and subscriptions. They are built with predefined workflows that may not match the specific needs of each research project, making it difficult to adapt them to unique experiments or customize fields and calculations. ELNs offer some flexibility, but they come with their challenges, including issues with data integrity, ownership, and transfer between systems. Both options typically involve storing data on external servers, raising concerns over security and long-term access to valuable research data.
 
-To address these challenges, with colleagues at [IIT](https://nanobio.iit.it/) have developed a fully customizable Python-based app for managing our experiments. It uses a local database, giving us full control over our data. The current version includes dynamic data entry, data editing, PDF report generation, and image compression.
-
-We published the blueprint of this app as open-source code from which you can easily adjust the fields and add new functions based on your specific project. 
-This makes the app adaptable to the needs of each department, offering a free, versatile, and practical solution.
-
-You can fork the project on GitHub and tailor it to your needs. Please share any improvements that could help the community, and we’re happy to assist if you run into any issues—check the readme for detailed operational instructions.
+In contrast, NanoDB, our Python-based solution, offers a much more practical approach. Designed specifically for flexibility and control, it uses a local database, allowing researchers to store and manage their data securely without relying on external servers. NanoDB is fully open-source and freely available on GitHub, making it a cost-effective, adaptable, and practical tool for managing experimental data in real-time, all while keeping control of your data within your department.
  
 ---
 
