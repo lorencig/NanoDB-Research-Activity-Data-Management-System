@@ -6,7 +6,7 @@
  
 ---
 
-# 🌎 Overview NanoDB
+# 🌎 Overview 
 
 Many existing solutions for data management in research, like LIMS and ELNs, have significant limitations. LIMS systems tend to be rigid and expensive, often requiring costly licenses and subscriptions. They are built with predefined workflows that may not match the specific needs of each research project, making it difficult to adapt them to unique experiments or customize fields and calculations. ELNs offer some flexibility, but they come with their challenges, including issues with data integrity, ownership, and transfer between systems. Both options typically involve storing data on external servers, raising concerns over security and long-term access to valuable research data.
 
