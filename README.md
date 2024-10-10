@@ -1,3 +1,4 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13912817.svg)](https://doi.org/10.5281/zenodo.13912817)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/07def33a8fcb4091b9c108c5bbaac068)](https://app.codacy.com/gh/lorencig/NanoDB-Research-Activity-Data-Management-System/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
 
 # NanoDB: Research Activity Data Management System
